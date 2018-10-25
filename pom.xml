@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<impala.jdbc.version>2.5.30</impala.jdbc.version>
         	<uber.jar.name>cloudera-impala-jdbc-example-uber.jar</uber.jar.name>
-        	<uber.jar.main.class>com.cloudera.example.ClouderaImpalaJdbcExample</uber.jar.main.class>
+        	<uber.jar.main.class>com.bhh.gaoxz.impala.ClouderaImpalaJdbcExample</uber.jar.main.class>
 	</properties>
 	
 	<dependencies>
@@ -23,18 +23,24 @@
 		<dependency>
 			<groupId>com.cloudera.impala.jdbc</groupId>
 			<artifactId>hive_metastore</artifactId>
-			<version>${impala.jdbc.version}</version>
+			<version>2.5.30</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cloudera.impala.jdbc</groupId>
 			<artifactId>hive_service</artifactId>
 			<version>${impala.jdbc.version}</version>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.cloudera.impala.jdbc</groupId>-->
+			<!--<artifactId>ImpalaJDBC41</artifactId>-->
+			<!--<version>${impala.jdbc.version}</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.cloudera.impala.jdbc</groupId>
 			<artifactId>ImpalaJDBC41</artifactId>
 			<version>${impala.jdbc.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.cloudera.impala.jdbc</groupId>
 			<artifactId>ql</artifactId>
@@ -177,27 +183,30 @@
 
 
 		<!-- YOUR LOCAL REPO -->
-		<repository>
-			<id>YOUR.LOCAL.REPO.ID</id>
-			<url><YOUR LOCAL REPO URL></url>
-			<name>YOUR.LOCAL.REPO.NAME</name>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
+		<!--<repository>-->
+			<!--<id>nexus.local</id>-->
+			<!--<url>http://192.168.1.99:8181/repository/3rd/</url>-->
+			<!--<name>Nexus Local</name>-->
+			<!--<releases>-->
+				<!--<enabled>true</enabled>-->
+			<!--</releases>-->
+			<!--<snapshots>-->
+				<!--<enabled>false</enabled>-->
+			<!--</snapshots>-->
+		<!--</repository>-->
+
+		<!--<repository>-->
+			<!--<id>cdh.repo</id>-->
+			<!--<url>https://repository.cloudera.com/artifactory/cloudera-repos</url>-->
+			<!--<name>Cloudera Repositories</name>-->
+			<!--<snapshots>-->
+				<!--<enabled>false</enabled>-->
+			<!--</snapshots>-->
+		<!--</repository>-->
 
 		<repository>
-			<id>cdh.repo</id>
-			<url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
-			<name>Cloudera Repositories</name>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		
-		<repository>
 			<id>central</id>
-			<url>http://repo1.maven.org/maven2/</url>
+			<url>https://192.168.1.99:8181/repository/maven-public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
